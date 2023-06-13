@@ -1,1 +1,301 @@
+#CSS code for UsabilityHub Home page
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;450&family=Roboto:wght@400;700&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+/*global properties*/
+:root{
+    --primary-text-color:#183b56;
+    --secondary-text-color:#577592;
+    --accent-color:#2294ed;
+    --accent-color-dark:#1d69a3;
+    --padding-inline-selection: 20px;
+}
+
+body{
+    font-family:'Poppins', sans-serif;
+    color: var(--primary-text-color);
+}
+/*rem stands for the measurement unit 1 rem=font size of html element=16px*/
+h1{
+    font-size:3rem;
+}
+h2{
+    font-size: 2rem;
+}
+p{
+    font-family: 'Roboto' , sans-serif;
+    font-size: 1.25rem;
+    color: var(--secondary-text-color);
+    line-height: 1.8rem;
+}
+/*for style the link*/
+a{
+    text-decoration: none;
+    display: inline-block;
+}
+ul{
+    list-style: none;
+}
+/*utility class*/
+.small-bold-text{
+    font-size:1rem;
+    font-weight: 700;
+}
+/*margin inline used for margine from both left right*/
+.container{
+    max-width: 1180px;
+    margin-inline:auto;
+    padding-inline: var(--padding-inline-selection);
+    overflow: hidden;
+}
+.flex{
+    display: flex;
+    align-items: center;
+}
+.hover-link{
+    color: var(--primary-text-color);
+    transition: 0.2s ease-out;
+}
+.hover-link:hover{
+    color: var(--accent-color);
+}
+
+.primary-button{
+    background-color: var(--accent-color);
+    border-radius: 6px;
+    font-weight:700;
+    color: white !important;
+    padding: 12px 24px;
+    box-shadow: 0 0 2px var(--secondary-text-color);
+    transition: 0.2s ease-out;
+    text-align:center;
+}
+.primary-button:hover{
+    background-color: var(--accent-color-dark);
+
+}
+.secondary-button{
+    border: 0.5px solid var(--secondary-text-color);
+    border-radius: 6px;
+    font-weight:700;
+    color: var(--primary-text-color) !important;
+    padding: 12px 24px;
+    transition: 0.2s ease-out;
+}
+.secondary-button:hover{
+    border-color: var(--accent-color);
+    color: var(--accent-color) !important;
+}
+/*top banner*/
+/*actual top banner class which represent with background image as well as text*/
+.topbanner{
+    background-color:#e74694;;
+    background-image: url('assets/asset 32.png');
+    background-size:300px;
+    
+}
+
+.banner-text{
+    color:white;
+    padding: 15px 30px;
+    text-align: center;
+}
+
+/*nevigation-bar*/
+/*make a main nave to flex for provide two devision one side logo and other side list of items using flex*/
+.main-nav{
+    margin-top: 20px;
+    justify-content: space-between;
+}
+.company-logo img{
+    width:200px;
+}
+.nav-links{
+    /*flex basis used for provide the intial width of flex*/
+    flex-basis: 730px;
+}
+.nav-links ul{
+    justify-content: end;
+    gap: 40px;
+}
+.nav-toggle{
+    display:none;
+}
+/*header-section*/
+/*here we just access the header*/
+header{
+    padding: 50px var(--padding-inline-selection) 0 ;
+}
+/* for using (.) to access the class property here the class="header-section"*/
+.header-section{
+    justify-content: center;
+    gap: 50px;
+}
+.header-right img{
+    width:100%;
+}
+.header-left{
+    max-width: 40vw;
+}
+.header-left h1{
+    margin-top:20px;
+}
+.get-started{
+    margin-top:20px;
+}
+/*companies-section*/
+.companies-header{
+    text-align:center;
+    margin-block: 30px;
+    color: var(--primary-text-color);
+}
+.logos{
+    justify-content: space-evenly; 
+    flex-wrap:wrap;
+    gap:20px;
+}
+.logo{
+    height:40px;
+}
+
+/*features*/
+.feature-section{
+    padding: 200px var(--padding-inline-selection) 0;
+    background-image: url('assets/asset 34.svg');
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size:850px;
+}
+.features-header,.example-header{
+    text-align:center;
+}
+.features-header{
+    margin-bottom:40px;
+}
+.features-header h2{
+    margin-bottom: 20px;
+}
+/*parent feature to add the wrap*/
+.features-area{
+    flex-wrap: wrap;
+    justify-content:space-between;
+    gap:20px;
+    margin-top: 20px;
+}
+.features-card{
+    flex-direction: column ;
+    gap:20px;
+    max-width:30%;
+    text-align:center;
+}
+.features-card img{
+    width:60px;
+}
+/*big-feature-section*/
+.big-feature-section{
+    padding: 50px var(--padding-inline-selection) 0;
+}
+.big-feature-container {
+    gap:20px;
+}
+#second-big-feature{
+    flex-direction:row-reverse;
+}
+.feature-img img{
+    width: 100%;
+}
+.feature-des{
+    flex-direction: column;
+    align-items: flex-start;
+}
+/*example-section*/
+.example-section{
+    padding: 80px var(--padding-inline-selection);
+}
+.example-area{
+    margin-block: 30px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.example-card{
+    width:23%;
+    position: relative;
+    height:300px;
+    background:black;
+    background: linear-gradient(rgb(0,0,0,0.1) , rgb(0,0,0,0.8)) ,url('assets/asset 36.jpeg');
+    background-size: cover;
+    transition:0.2s ease-out;
+}
+.example-card:hover{
+    box-shadow: 0 0 10px #888 ;
+}
+.example-card:nth-child(2){
+    background: linear-gradient(rgb(0,0,0,0.1) , rgb(0,0,0,0.8)) ,url('assets/asset 37.jpeg');
+    background-size: cover;
+}
+.example-card:nth-child(3){
+    background: linear-gradient(rgb(0,0,0,0.1) , rgb(0,0,0,0.8)) ,url('assets/asset 38.jpeg');
+    background-size: cover;
+}
+.example-card:nth-child(4){
+    background: linear-gradient(rgb(0,0,0,0.1) , rgb(0,0,0,0.8)) ,url('assets/asset 39.jpeg');
+    background-size: cover;
+}
+.example-header{
+    flex-direction: column;
+    gap:20px;
+    text-align: center;
+}
+
+.card-text{
+    position: absolute;
+    bottom:20px;
+    left:20px;
+    right:20px;
+    color:white;
+
+}
+/*cta section*/
+.cta-section-container{
+
+    flex-direction: column;
+    gap:30px;
+    color: white;
+    text-align:center;
+}
+.cta-section{
+    padding:120px var(--padding-inline-selection) 80px;
+    background-color:#183b56;
+}
+
+/*footer*/
+footer{
+    padding:70px;
+    background-color:#ebf2fa;
+}
+.link-column{
+    flex-direction: column;
+    align-items: flex-start;
+    gap:20px;
+}
+.footer-container{
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+/*sub-footer*/
+.subfooter{
+    background-color: #b9cde4 ;
+    padding:var(--padding-inline-selection);
+}
+.subfooter-container{
+    justify-content: center;
+    gap:30px; 
+    flex-wrap:wrap;
+}
+
+
 
